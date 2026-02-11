@@ -1,0 +1,154 @@
+:root {
+  /* Raw color tokens (from provided token source) */
+  --color-text-primary: #000000;
+  --color-text-secondary: #52525b;
+  --color-text-inverted: #ffffff;
+
+  --color-borders-primary: #52525b;
+  --color-borders-secondary: #d4d4d8;
+
+  --color-surfaces-primary: #ffffff;
+  --color-surfaces-secondary: #f4f4f5;
+
+  --color-alerts-high: #ee4343;
+  --color-alerts-success: #16a249;
+
+  --color-states-tappable: #2362ea;
+  --color-states-inactive: #71717a;
+
+  --color-gray-3: #d4d4d8;
+  --color-gray-8: #27272a;
+  --color-gray-9: #202024;
+
+  /* Raw spacing tokens (from provided token source) */
+  --spacing-none: 0px;
+  --spacing-xs: 4px;
+  --spacing-s: 8px;
+  --spacing-m: 16px;
+  --spacing-l: 24px;
+  --spacing-xl: 32px;
+  --spacing-xxl: 40px;
+
+  /* Raw typography weight tokens (from provided token source) */
+  --typography-web-body1: 400; /* Regular */
+  --typography-web-body1-strong: 600; /* Semibold */
+  --typography-web-body1-stronger: 700; /* Bold */
+  --typography-web-caption1: 400; /* Regular */
+  --typography-web-caption1-strong: 600; /* Semibold */
+  --typography-web-caption1-stronger: 700; /* Bold */
+  --typography-web-caption2: 400; /* Regular */
+  --typography-web-caption2-strong: 600; /* Semibold */
+  --typography-web-display: 600; /* Semibold */
+  --typography-web-largeTitle: 600; /* Semibold */
+  --typography-web-subtitle1: 600; /* Semibold */
+  --typography-web-subtitle2: 600; /* Semibold */
+  --typography-web-subtitle2-stronger: 700; /* Bold */
+  --typography-web-title1: 600; /* Semibold */
+  --typography-web-title2: 600; /* Semibold */
+  --typography-web-title3: 600; /* Semibold */
+
+  /* Semantic DS aliases consumed by components */
+  --ds-color-canvas: var(--color-surfaces-primary);
+  --ds-color-text-primary: var(--color-text-primary);
+  --ds-color-text-secondary: var(--color-text-secondary);
+  --ds-color-text-disabled: var(--color-states-inactive);
+
+  --ds-color-border-default: var(--color-borders-secondary);
+  --ds-color-border-hover: var(--color-borders-primary);
+  --ds-color-border-focus: var(--color-states-tappable);
+  --ds-color-border-error: var(--color-alerts-high);
+  --ds-color-border-success: var(--color-alerts-success);
+
+  --ds-color-bg-default: var(--color-surfaces-primary);
+  --ds-color-bg-disabled: var(--color-surfaces-secondary);
+
+  --ds-color-support-error: var(--color-alerts-high);
+  --ds-color-support-success: var(--color-alerts-success);
+
+  --ds-spacing-2xs: var(--spacing-xs);
+  --ds-spacing-xs: var(--spacing-s);
+  --ds-spacing-sm: var(--spacing-s);
+  --ds-spacing-md: var(--spacing-m);
+
+  --ds-radius-sm: 8px;
+
+  /* Typography mapped to provided weight tokens */
+  --ds-font-family-base: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --ds-font-size-label: 14px;
+  --ds-line-height-label: 20px;
+  --ds-font-weight-label: 600; /* typography-web-body1-strong: Semibold */
+
+  --ds-font-size-input: 14px;
+  --ds-line-height-input: 20px;
+  --ds-font-weight-input: 400; /* typography-web-body1: Regular */
+
+  --ds-font-size-helper: 12px;
+  --ds-line-height-helper: 16px;
+  --ds-font-weight-helper: 400; /* typography-web-caption1: Regular */
+
+  /* Text component typography scale */
+  --ds-typography-display-size: 68px;
+  --ds-typography-display-line-height: 92px;
+  --ds-typography-display-weight: var(--typography-web-display);
+
+  --ds-typography-largeTitle-size: 40px;
+  --ds-typography-largeTitle-line-height: 52px;
+  --ds-typography-largeTitle-weight: var(--typography-web-largeTitle);
+
+  --ds-typography-title1-size: 32px;
+  --ds-typography-title1-line-height: 40px;
+  --ds-typography-title1-weight: var(--typography-web-title1);
+
+  --ds-typography-title2-size: 28px;
+  --ds-typography-title2-line-height: 36px;
+  --ds-typography-title2-weight: var(--typography-web-title2);
+
+  --ds-typography-title3-size: 24px;
+  --ds-typography-title3-line-height: 32px;
+  --ds-typography-title3-weight: var(--typography-web-title3);
+
+  --ds-typography-subtitle1-size: 20px;
+  --ds-typography-subtitle1-line-height: 26px;
+  --ds-typography-subtitle1-weight: var(--typography-web-subtitle1);
+
+  --ds-typography-subtitle2-size: 16px;
+  --ds-typography-subtitle2-line-height: 22px;
+  --ds-typography-subtitle2-weight: var(--typography-web-subtitle2);
+  --ds-typography-subtitle2Stronger-weight: var(--typography-web-subtitle2-stronger);
+
+  --ds-typography-body1-size: 14px;
+  --ds-typography-body1-line-height: 20px;
+  --ds-typography-body1-weight: var(--typography-web-body1);
+  --ds-typography-body1Strong-weight: var(--typography-web-body1-strong);
+  --ds-typography-body1Stronger-weight: var(--typography-web-body1-stronger);
+
+  --ds-typography-caption1-size: 12px;
+  --ds-typography-caption1-line-height: 16px;
+  --ds-typography-caption1-weight: var(--typography-web-caption1);
+  --ds-typography-caption1Strong-weight: var(--typography-web-caption1-strong);
+  --ds-typography-caption1Stronger-weight: var(--typography-web-caption1-stronger);
+
+  --ds-typography-caption2-size: 10px;
+  --ds-typography-caption2-line-height: 14px;
+  --ds-typography-caption2-weight: var(--typography-web-caption2);
+  --ds-typography-caption2Strong-weight: var(--typography-web-caption2-strong);
+}
+
+[data-theme="dark"] {
+  --ds-color-canvas: var(--color-gray-9);
+  --ds-color-text-primary: var(--color-text-inverted);
+  --ds-color-text-secondary: var(--color-gray-3);
+  --ds-color-text-disabled: var(--color-states-inactive);
+
+  --ds-color-border-default: var(--color-borders-primary);
+  --ds-color-border-hover: var(--color-gray-3);
+  --ds-color-border-focus: var(--color-states-tappable);
+  --ds-color-border-error: var(--color-alerts-high);
+  --ds-color-border-success: var(--color-alerts-success);
+
+  --ds-color-bg-default: var(--color-gray-8);
+  --ds-color-bg-disabled: var(--color-gray-9);
+
+  --ds-color-support-error: var(--color-alerts-high);
+  --ds-color-support-success: var(--color-alerts-success);
+}
