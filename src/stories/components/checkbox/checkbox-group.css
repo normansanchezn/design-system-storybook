@@ -1,0 +1,85 @@
+@import "../../tokens/design-tokens.css";
+
+.checkboxGroup {
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
+.checkboxGroup__label {
+  color: var(--ds-color-text-primary);
+  font-size: var(--ds-typography-body1-size);
+  font-weight: var(--ds-typography-body1Strong-weight);
+  font-family: var(--ds-font-family-base);
+  line-height: var(--ds-typography-body1-line-height);
+  margin-bottom: var(--ds-spacing-xs);
+}
+
+.checkboxGroup__options {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-s);
+}
+
+.checkboxOption {
+  align-items: center;
+  color: var(--ds-color-text-primary);
+  cursor: pointer;
+  display: inline-flex;
+  gap: var(--spacing-s);
+  font-family: var(--ds-font-family-base);
+  font-size: var(--ds-typography-body1-size);
+  font-weight: var(--ds-typography-body1-weight);
+  line-height: var(--ds-typography-body1-line-height);
+  padding-inline-start: var(--spacing-l);
+  height: 24px;
+}
+
+.checkboxOption__input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.checkboxOption__control {
+  align-items: center;
+  border: 2px solid var(--ds-color-border-default);
+  border-radius: 4px;
+  box-sizing: border-box;
+  display: inline-flex;
+  height: 24px;
+  justify-content: center;
+  width: 24px;
+  background: var(--ds-color-surfaces-primary);
+}
+
+.checkboxOption__control::after {
+  content: "";
+  width: 6px;
+  height: 10px;
+  border: solid transparent;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+  transition: border-color 0.08s ease;
+  align-self: center;
+}
+
+.checkboxOption__input:focus-visible + .checkboxOption__control {
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--ds-color-border-focus) 20%, transparent);
+  border-color: var(--ds-color-border-focus);
+}
+
+.checkboxOption__input:checked + .checkboxOption__control {
+  border-color: var(--ds-color-border-focus);
+}
+
+.checkboxOption__input:checked + .checkboxOption__control::after {
+  border-color: var(--ds-color-border-focus);
+}
+
+.checkboxGroup__helper {
+  color: var(--ds-color-text-secondary);
+  font-size: var(--ds-typography-caption1-size);
+  line-height: var(--ds-typography-caption1-line-height);
+  margin: var(--ds-spacing-xs) 0 0;
+}
