@@ -1,0 +1,85 @@
+@import "../../tokens/design-tokens.css";
+
+.radioGroup {
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
+.radioGroup__label {
+  color: var(--ds-color-text-primary);
+  font-family: var(--ds-font-family-base);
+  font-size: var(--ds-typography-body1-size);
+  font-weight: var(--ds-typography-body1Strong-weight);
+  line-height: var(--ds-typography-body1-line-height);
+  margin-bottom: var(--ds-spacing-xs);
+}
+
+.radioGroup__options {
+  display: flex;
+  flex-direction: column;
+  gap: var(--ds-spacing-sm);
+}
+
+.radioOption {
+  align-items: center;
+  color: var(--ds-color-text-primary);
+  cursor: pointer;
+  display: inline-flex;
+  gap: var(--ds-spacing-sm);
+  font-family: var(--ds-font-family-base);
+  font-size: var(--ds-typography-body1-size);
+  font-weight: var(--ds-typography-body1-weight);
+  line-height: var(--ds-typography-body1-line-height);
+}
+
+.radioOption__input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.radioOption__control {
+  align-items: center;
+  border: 1px solid var(--ds-color-border-default);
+  border-radius: 999px;
+  display: inline-flex;
+  height: var(--ds-spacing-md);
+  justify-content: center;
+  width: var(--ds-spacing-md);
+  background: transparent;
+}
+
+.radioOption__control::after {
+  content: "";
+  width: var(--ds-spacing-xs);
+  height: var(--ds-spacing-xs);
+  border-radius: 999px;
+  background: transparent;
+}
+
+.radioOption__input:focus-visible + .radioOption__control {
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--ds-color-border-focus) 20%, transparent);
+  border-color: var(--ds-color-border-focus);
+}
+
+.radioOption__input:checked + .radioOption__control {
+  border-color: var(--ds-color-border-focus);
+}
+
+.radioOption__input:checked + .radioOption__control::after {
+  background: var(--ds-color-border-focus);
+}
+
+.radioOption--disabled {
+  color: var(--ds-color-text-disabled);
+  cursor: not-allowed;
+}
+
+.radioOption--disabled .radioOption__control {
+  border-color: var(--ds-color-border-default);
+}
+
+.radioGroup--disabled .radioOption__labelText {
+  color: var(--ds-color-text-disabled);
+}
