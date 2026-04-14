@@ -28,4 +28,48 @@ describe("CheckboxGroup", () => {
     await userEvent.click(first);
     expect(onChange).toHaveBeenLastCalledWith(["b"]);
   });
+
+  it("does not emit changes when group is disabled", async () => {
+    const onChange = vi.fn();
+    render(
+      <CheckboxGroup
+        label="menu"
+        disabled
+        options={[
+          { label: "A", value: "a" },
+          { label: "B", value: "b" },
+        ]}
+        onValueChange={onChange}
+      />,
+    );
+
+    const first = screen.getByLabelText("A");
+    expect(first).toBeDisabled();
+
+    await userEvent.click(first);
+    expect(onChange).not.toHaveBeenCalled();
+  });
+
+  it("emits next values in controlled mode without mutating checked state", async () => {
+    const onChange = vi.fn();
+    render(
+      <CheckboxGroup
+        label="menu"
+        value={["a"]}
+        options={[
+          { label: "A", value: "a" },
+          { label: "B", value: "b" },
+        ]}
+        onValueChange={onChange}
+      />,
+    );
+
+    const first = screen.getByLabelText("A");
+    const second = screen.getByLabelText("B");
+
+    await userEvent.click(second);
+    expect(onChange).toHaveBeenCalledWith(["a", "b"]);
+    expect(first).toBeChecked();
+    expect(second).not.toBeChecked();
+  });
 });

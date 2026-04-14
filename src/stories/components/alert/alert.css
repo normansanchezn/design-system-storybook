@@ -1,0 +1,76 @@
+@import "../../tokens/design-tokens.css";
+
+.alert {
+  --alert-accent: var(--ds-color-support-neutral);
+  --alert-bg: color-mix(in srgb, var(--alert-accent) 12%, var(--ds-color-bg-default));
+  align-items: center;
+  background: var(--alert-bg);
+  border: 1px solid var(--alert-accent);
+  border-radius: var(--ds-radius-sm);
+  color: var(--ds-color-text-primary);
+  display: flex;
+  gap: var(--ds-spacing-sm);
+  padding: var(--ds-spacing-sm) var(--ds-spacing-md);
+}
+
+.alert--neutral {
+  --alert-accent: var(--ds-color-support-neutral);
+}
+
+.alert--informative {
+  --alert-accent: var(--ds-color-support-informative);
+}
+
+.alert--warning {
+  --alert-accent: var(--ds-color-support-warning);
+}
+
+.alert--success {
+  --alert-accent: var(--ds-color-support-success);
+}
+
+.alert--error {
+  --alert-accent: var(--ds-color-support-error);
+}
+
+.alert__icon {
+  align-items: center;
+  color: var(--alert-accent);
+  display: inline-flex;
+  flex-shrink: 0;
+  line-height: 0;
+}
+
+.alert__message {
+  color: var(--ds-color-text-primary);
+  flex: 1;
+  font-family: var(--ds-font-family-base);
+  font-size: var(--ds-typography-body1-size);
+  font-weight: var(--ds-typography-body1-weight);
+  line-height: var(--ds-typography-body1-line-height);
+  margin: 0;
+}
+
+.alert__closeButton {
+  align-items: center;
+  background: transparent;
+  border: none;
+  border-radius: 6px;
+  color: var(--alert-accent);
+  cursor: pointer;
+  display: inline-flex;
+  flex-shrink: 0;
+  justify-content: center;
+  line-height: 0;
+  margin: 0;
+  padding: 2px;
+}
+
+.alert__closeButton:hover {
+  background: color-mix(in srgb, var(--alert-accent) 10%, transparent);
+}
+
+.alert__closeButton:focus-visible {
+  box-shadow: 0 0 0 2px color-mix(in srgb, var(--alert-accent) 28%, transparent);
+  outline: none;
+}

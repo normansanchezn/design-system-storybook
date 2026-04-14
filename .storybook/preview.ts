@@ -28,7 +28,6 @@ const preview: Preview = {
           style: {
             backgroundColor: "var(--ds-color-canvas)",
             color: "var(--ds-color-text-primary)",
-            minHeight: "100vh",
             padding: "16px",
           },
         },
