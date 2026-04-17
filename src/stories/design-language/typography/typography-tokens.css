@@ -1,0 +1,79 @@
+@import "../../tokens/design-tokens.css";
+
+.ds-typography-page {
+  max-width: 980px;
+  padding: 24px;
+}
+
+.ds-typography-page__section {
+  margin: 0 0 28px;
+}
+
+.ds-typography-page__title {
+  margin: 0 0 10px;
+  color: var(--ds-color-text-primary);
+  font-family: var(--ds-font-family-base);
+  font-size: 34px;
+  font-weight: 700;
+  line-height: 42px;
+}
+
+.ds-typography-page__description {
+  max-width: 760px;
+  margin: 0 0 18px;
+  color: var(--ds-color-text-primary);
+  font-family: var(--ds-font-family-base);
+  font-size: 18px;
+  line-height: 28px;
+}
+
+.ds-typography-page__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 14px;
+}
+
+.ds-typography-token {
+  background: var(--ds-color-bg-disabled);
+  border: 1px solid var(--ds-color-border-default);
+  padding: 14px;
+}
+
+.ds-typography-token__sample {
+  margin: 0 0 8px;
+  color: var(--ds-color-text-primary);
+  font-family: var(--ds-font-family-base);
+}
+
+.ds-typography-token__name {
+  margin: 0 0 2px;
+  color: var(--ds-color-text-primary);
+  font-family: var(--ds-font-family-base);
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 24px;
+}
+
+.ds-typography-token__meta {
+  margin: 0;
+  color: var(--ds-color-text-secondary);
+  font-family: var(--ds-font-family-base);
+  font-size: 13px;
+  line-height: 20px;
+}
+
+@media (max-width: 900px) {
+  .ds-typography-page {
+    padding: 20px;
+  }
+
+  .ds-typography-page__title {
+    font-size: 28px;
+    line-height: 36px;
+  }
+
+  .ds-typography-page__description {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}

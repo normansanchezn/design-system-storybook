@@ -1,0 +1,117 @@
+@import "../../tokens/design-tokens.css";
+
+.ds-colors-page {
+  max-width: 980px;
+  padding: 24px;
+}
+
+.ds-colors-page__section {
+  margin: 0 0 40px;
+}
+
+.ds-colors-page__title {
+  margin: 0 0 12px;
+  color: var(--ds-color-text-primary);
+  font-family: var(--ds-font-family-base);
+  font-size: 34px;
+  font-weight: 700;
+  line-height: 42px;
+}
+
+.ds-colors-page__description {
+  max-width: 760px;
+  margin: 0 0 24px;
+  color: var(--ds-color-text-primary);
+  font-family: var(--ds-font-family-base);
+  font-size: 18px;
+  line-height: 28px;
+}
+
+.ds-colors-page__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 16px;
+}
+
+.ds-color-token {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.ds-color-token__canvas {
+  background: var(--ds-color-bg-disabled);
+  padding: 24px;
+}
+
+.ds-color-token__card {
+  border: 1px solid var(--ds-color-border-default);
+  background: var(--ds-color-bg-default);
+}
+
+.ds-color-token__swatch {
+  width: 100%;
+  min-height: 154px;
+  border-bottom: 1px solid var(--ds-color-border-default);
+}
+
+.ds-color-token__body {
+  padding: 10px;
+}
+
+.ds-color-token__name {
+  margin: 0 0 4px;
+  color: var(--ds-color-text-primary);
+  font-family: var(--ds-font-family-base);
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 30px;
+}
+
+.ds-color-token__meta {
+  margin: 0;
+  color: var(--ds-color-text-primary);
+  font-family: var(--ds-font-family-base);
+  font-size: 15px;
+  line-height: 23px;
+}
+
+.ds-color-token__label {
+  margin: 0;
+  color: var(--ds-color-text-primary);
+  font-family: var(--ds-font-family-base);
+  font-size: 30px;
+  font-weight: 600;
+  line-height: 38px;
+}
+
+@media (max-width: 900px) {
+  .ds-colors-page {
+    padding: 20px;
+  }
+
+  .ds-colors-page__title {
+    font-size: 28px;
+    line-height: 36px;
+  }
+
+  .ds-colors-page__description {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .ds-color-token__name {
+    font-size: 20px;
+    line-height: 28px;
+  }
+
+  .ds-color-token__meta {
+    font-size: 14px;
+    line-height: 22px;
+  }
+
+  .ds-color-token__label {
+    font-size: 22px;
+    line-height: 30px;
+  }
+}
